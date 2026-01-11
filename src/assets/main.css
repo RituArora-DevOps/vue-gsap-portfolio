@@ -1,0 +1,77 @@
+.gradient-hero {
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.translucent-dark {
+  background-color: rgba(15, 32, 39, 0.8); /* dark from your gradient */
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#skills i {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+#skills ul li {
+  font-size: 0.9rem;
+  padding: 0.4rem 0.75rem;
+}
+
+.card-title {
+  color: inherit;
+}
+
+.card-text,
+.card-footer a {
+  color: inherit;
+}
+
+.card-footer a.btn-outline-dark {
+  border-color: #1a252f; /* your preferred dark blue */
+  color: #1a252f;
+}
+
+.card-footer a.btn-outline-dark:hover {
+  background-color: #1a252f;
+  border-color: #1a252f;
+  color: #fff;
+}
+
+.text-heading {
+  color: #1a252f; /* Your dark blue */
+  font-weight: 600;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.bg-section {
+  background-color: #f8f9fa; /* Light grey */
+}
+
+.bg-section-alt {
+  background-color: #f8f9fa; /* Softer light tone */
+}
+
+.text-accent {
+  color: #e67e22;
+}
+
+#experience ul li {
+  margin-bottom: 0.3rem;
+}
+
+.project-card {
+  transition: transform 0.3s ease;
+}
+
+.motion-card {
+  will-change: transform, opacity;
+}
