@@ -17,7 +17,7 @@ app.directive('scroll', {
           observer.unobserve(el); // Stop watching once it has appeared
         }
       });
-    }, { threshold: 0.6, // Trigger when 10% of the element is visible
+    }, { threshold: 0.2, // Trigger when 10% of the element is visible
         rootMargin: '0px 0px -50px 0px' // "Shrinks" the trigger area by 50px from the bottom
     }); 
     
