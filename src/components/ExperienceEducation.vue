@@ -45,7 +45,7 @@
             </li>
 
             <li class="mb-3 ps-3">
-              <strong class="text-white">MSc & BSc (Chemistry)</strong><br />
+              <strong class="text-white">MSc & BSc</strong><br />
               <span class="small">University of Delhi, India</span>
             </li>
           </ul>
