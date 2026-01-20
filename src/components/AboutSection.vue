@@ -46,7 +46,7 @@
               </li>
               <li class="d-flex align-items-start">
                 <span class="me-2">🧠</span>
-                <span><strong>AI Ready:</strong> PhD-level background in logic.</span>
+                <span><strong>AI Ready:</strong> Research background in big data.</span>
               </li>
             </ul>
           </div>

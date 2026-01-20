@@ -18,15 +18,15 @@
 
             <div class="mb-5 position-relative">
               <div class="timeline-dot"></div>
-              <h5 class="mb-1 fw-semibold">Computational Researcher - Postdoc</h5>
+              <h5 class="mb-1 fw-semibold">Computational Researcher</h5>
               <p class="text-secondary small mb-1">Concordia University, QC · Mar 2019 – Feb 2022</p>
             </div>
 
-            <div class="mb-4 position-relative">
+            <!-- <div class="mb-4 position-relative">
               <div class="timeline-dot"></div>
               <h5 class="mb-1 fw-semibold">Assistant Professor</h5>
               <p class="text-secondary small mb-1">University of Delhi, India · Jan 2016 – Dec 2018</p>
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -39,10 +39,10 @@
               <span class="text-accent small fst-italic">2025</span>
             </li>
             
-            <li class="mb-4 ps-3">
+            <!-- <li class="mb-4 ps-3">
               <strong class="text-white">PhD (Computational Chemistry)</strong><br />
               <span class="small">University of Delhi, India</span>
-            </li>
+            </li> -->
 
             <li class="mb-3 ps-3">
               <strong class="text-white">MSc & BSc</strong><br />

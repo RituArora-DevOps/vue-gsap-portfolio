@@ -31,14 +31,14 @@ const projects = {
     tech: 'React, FastAPI, LangChain, OpenAI API, PostgreSQL, Docker, Pytest',
     github: 'https://github.com/RituArora-DevOps/Secure-FastAPI-powered-backend-subscription-app.git',
     // CHANGE: Use the .io link, not the /blob/ link
-    ppt: 'https://rituarora-devops.github.io/projects-presentation/FastAPI-Subscription.pdf'
+    //ppt: 'https://rituarora-devops.github.io/projects-presentation/FastAPI-Subscription.pdf'
   },
   heart_disease_ai: {
     title: 'Heart Risk Predictor & Explainable AI',
     description: 'Predictive ML pipeline integrating SHAP for model interpretability, served via a FastAPI microservice for transparent clinical decision support.',
     tech: 'React, FastAPI, Scikit-learn, SHAP, Python, Docker',
     github: 'https://github.com/RituArora-DevOps/heart-disease-predictor',
-    ppt: 'https://rituarora-devops.github.io/projects-presentation/HeartDiseasePredictor2.pdf'
+    //ppt: 'https://rituarora-devops.github.io/projects-presentation/HeartDiseasePredictor2.pdf'
   },
   devops_mern: {
     title: 'DevOpsified MERN Stack',
@@ -51,14 +51,14 @@ const projects = {
     description: 'A desktop-to-cloud shopping system. Features a Spring Boot REST API and a JavaFX client. Architected using SOLID principles and Design Patterns (Singleton, Strategy, Factory).',
     tech: 'Java, Spring Boot, JavaFX, PostgreSQL, Docker, JUnit, JPA',
     github: 'https://github.com/RituArora-DevOps/online-store-system-postgres-v2',
-    ppt: 'https://rituarora-devops.github.io/projects-presentation/SpringBootnJavaFXML.pdf',
+    //ppt: 'https://rituarora-devops.github.io/projects-presentation/SpringBootnJavaFXML.pdf',
   },
   online_store_dotnet: {
     title: 'Enterprise Store - .NET/C#',
     description: 'Web-based e-commerce implementation using ASP.NET MVC and SQL Server. Features secure Identity management and role-based access control (RBAC).',
     tech: 'ASP.NET MVC, C#, SQL Server, Entity Framework, Identity',
     github: 'https://github.com/RituArora-DevOps/OnlineStoreFront.git', 
-    ppt: 'https://rituarora-devops.github.io/projects-presentation/OnlineStoreFront-ASPNET.pdf'
+    //ppt: 'https://rituarora-devops.github.io/projects-presentation/OnlineStoreFront-ASPNET.pdf'
   },
   car_rental: {
     title: 'Car Rental Management System',
@@ -66,8 +66,8 @@ const projects = {
     tech: 'Node.js, Express.js, MySQL, Bootstrap, Render',
     github: 'https://github.com/RituArora-DevOps/RentnDrive',
     demo: 'https://www.youtube.com/watch?v=VGSBVmFnqrc',
-    live: 'https://carrentalmanagement.onrender.com',
-    ppt: 'https://rituarora-devops.github.io/projects-presentation/CarRentalSystem-final.pdf'
+    //live: 'https://carrentalmanagement.onrender.com',
+    //ppt: 'https://rituarora-devops.github.io/projects-presentation/CarRentalSystem-final.pdf'
   },
   movie_explorer: {
     title: 'Movie Explorer Web App',
@@ -75,7 +75,7 @@ const projects = {
     tech: 'Next.js, React, NextAuth, MongoDB, Tailwind CSS, TMDB API',
     github: 'https://github.com/RIDagher/movie-explorer-next',
     live: 'https://movie-explorer-next-re3c.vercel.app',
-    ppt: 'https://rituarora-devops.github.io/projects-presentation/Movie%20Explorer.pdf'
+    //ppt: 'https://rituarora-devops.github.io/projects-presentation/Movie%20Explorer.pdf'
   },
   day_care: {
     title: 'Day Care Management System',
@@ -83,7 +83,7 @@ const projects = {
     tech: 'PHP (Slim 4), MySQL, Twig, MeekroDB, Monolog, Bootstrap',
     github: 'https://github.com/FYFYBai/DayCare_Team4',
     live: 'https://daycare-management.42web.io/',
-    ppt: 'https://rituarora-devops.github.io/projects-presentation/Team4-DayCareSystemManagement.pdf'
+    //ppt: 'https://rituarora-devops.github.io/projects-presentation/Team4-DayCareSystemManagement.pdf'
   },
   laravel_portfolio: {
     title: 'Multilingual Laravel Portfolio',

@@ -5,7 +5,7 @@ Welcome to my professional portfolio! This project showcases my transition from 
 **Live Demo:** [Insert your Netlify/GitHub Pages URL here]
 
 ## 🧠 About the Developer
-I am a **PhD-level Computational Researcher** turned **AI Full-Stack Developer**. My background in chemistry taught me how to handle complex data at a molecular level; today, I apply that same precision to building scalable software architectures.
+I am a **PhD-level Computational Researcher** turned **AI Full-Stack Developer**. My background in Science taught me how to handle complex data; today, I apply that same precision to building scalable software architectures.
 
 ### 🎯 Current Focus
 * **AI Integration:** Building Agentic RAG workflows and Explainable ML models.
