@@ -19,7 +19,7 @@
             <div class="mb-5 position-relative">
               <div class="timeline-dot"></div>
               <h5 class="mb-1 fw-semibold">Computational Researcher</h5>
-              <p class="text-secondary small mb-1">Concordia University, QC </p>
+              <p class="text-secondary small mb-1">Concordia University, QC · Mar 2019 – Feb 2022</p>
             </div>
 
             <!-- <div class="mb-4 position-relative">
@@ -45,7 +45,7 @@
             </li> -->
 
             <li class="mb-3 ps-3">
-              <strong class="text-white">BSc</strong><br />
+              <strong class="text-white">MSc & BSc</strong><br />
               <span class="small">University of Delhi, India</span>
             </li>
           </ul>
