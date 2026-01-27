@@ -1,54 +1,60 @@
 <template>
-  <section id="about" class="py-5 bg-section">
+  <section id="about" class="py-5 bg-section" style="background: #fbfbfb; perspective: 1000px;">
     <div class="container">
-      <h2 class="text-center text-heading mb-5">About Me</h2>
+      <h2 class="text-center text-heading mb-5 about-title">About Me</h2>
       
       <div class="row gy-4 align-items-center justify-content-center">
-        <div class="col-lg-8 motion-card" v-scroll>
-          <h3 class="mb-3" style="color: #1a252f;">Bridging Analysis & Architecture</h3>
-          
-          <p class="lead text-accent fw-semibold">
-            Highly analytical Full-Stack Developer specializing in scalable, data-driven applications.
-          </p>
-          
-          <p class="text-muted">
-            I leverage my background in scientific research to engineer robust backends and 
-            complex data synchronization pipelines. My focus is on creating production-grade 
-            software that is as precise as it is scalable.
-          </p>
-          
-          <p class="text-muted mb-4">
-            <strong>Currently exploring:</strong> I am actively expanding my expertise in 
-            Generative AI, Computer Vision, and Agentic RAG workflows to build the next 
-            generation of intelligent enterprise solutions.
-          </p>
+        <div class="col-lg-7 bio-card-wrapper">
+          <div class="glass-light-card p-4 p-md-5">
+            <h3 class="mb-3" style="color: #0f2027;">Bridging Analysis & Architecture</h3>
+            <p class="lead text-accent fw-semibold">
+              Highly analytical Full-Stack Developer specializing in scalable, data-driven applications.
+            </p>
+            <p class="text-muted">
+              I leverage my background in scientific research to engineer robust backends and 
+              complex data synchronization pipelines. My focus is on creating production-grade 
+              software that is as precise as it is scalable.
+            </p>
 
-          <div class="d-flex flex-wrap gap-2 mt-4">
-            <span class="badge badge-custom"> React.js & Vue.js</span>
-            <span class="badge badge-custom">Java / Spring Boot</span>
-            <span class="badge badge-custom">Python</span>
-            <span class="badge badge-custom">AWS & Azure</span>
-            <span class="badge badge-custom">SQL & NoSQL</span>
+            <div class="d-flex flex-wrap gap-2 mt-4">
+              <span class="badge-modern">React.js & Vue.js</span>
+              <span class="badge-modern">Java / Spring Boot</span>
+              <span class="badge-modern">Python</span>
+              <span class="badge-modern">AWS & Azure</span>
+              <span class="badge-modern">SQL & NoSQL</span>
+            </div>
           </div>
         </div>
 
-        <div class="col-lg-4 motion-card" v-scroll>
-          <div class="research-card p-4 rounded-4 shadow-sm">
-            <h5 class="h6 text-uppercase fw-bold text-accent mb-3">The Research Edge</h5>
-            <ul class="list-unstyled small mb-0 text-white">
-              <li class="mb-3 d-flex align-items-start">
-                <span class="me-2">🧪</span>
-                <span><strong>Precision:</strong> Scientific rigor applied to code quality.</span>
-              </li>
-              <li class="mb-3 d-flex align-items-start">
-                <span class="me-2">📊</span>
-                <span><strong>Data-First:</strong> Expert at managing complex pipelines.</span>
-              </li>
-              <li class="d-flex align-items-start">
-                <span class="me-2">🧠</span>
-                <span><strong>AI Ready:</strong> Research background in big data.</span>
-              </li>
-            </ul>
+        <div class="col-lg-4 research-card-wrapper">
+          <div class="research-card-3d p-4">
+            <div class="card-inner">
+              <h5 class="h6 text-uppercase fw-bold text-accent mb-4">The Research Edge</h5>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-4 d-flex align-items-center">
+                  <span class="icon-circle">🧪</span>
+                  <div>
+                    <strong class="d-block text-white">Precision</strong>
+                    <span class="small opacity-75">Scientific rigor in code.</span>
+                  </div>
+                </li>
+                <li class="mb-4 d-flex align-items-center">
+                  <span class="icon-circle">📊</span>
+                  <div>
+                    <strong class="d-block text-white">Data-First</strong>
+                    <span class="small opacity-75">Expert pipelines.</span>
+                  </div>
+                </li>
+                <li class="d-flex align-items-center">
+                  <span class="icon-circle">🧠</span>
+                  <div>
+                    <strong class="d-block text-white">AI Ready</strong>
+                    <span class="small opacity-75">Big data background.</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="card-glow"></div>
           </div>
         </div>
       </div>
@@ -56,44 +62,122 @@
   </section>
 </template>
 
+<script setup>
+import { onMounted } from 'vue'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+// Register the plugin
+gsap.registerPlugin(ScrollTrigger);
+
+onMounted(() => {
+  // 1. Reveal Title
+  gsap.from(".about-title", {
+    scrollTrigger: {
+      trigger: ".about-title",
+      start: "top 90%",
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+  });
+
+  // 2. Animate Bio Card from Left
+  gsap.from(".bio-card-wrapper", {
+    scrollTrigger: {
+      trigger: ".bio-card-wrapper",
+      start: "top 85%",
+    },
+    x: -50,
+    opacity: 0,
+    duration: 1.2,
+    ease: "power4.out"
+  });
+
+  // 3. Animate Research Card from Right
+  gsap.from(".research-card-wrapper", {
+    scrollTrigger: {
+      trigger: ".research-card-wrapper",
+      start: "top 85%",
+    },
+    x: 50,
+    opacity: 0,
+    duration: 1.2,
+    delay: 0.2,
+    ease: "power4.out"
+  });
+});
+</script>
+
 <style scoped>
-/* Matching your badge style to your dark-blue headings */
-.badge-custom {
-  background-color: transparent;
-  color: #1a252f;
-  border: 1px solid #1a252f;
-  padding: 0.6rem 1rem;
-  font-weight: 500;
+/* Modern "Light" Glass for the Bio */
+.glass-light-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 28px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.03);
+  transition: transform 0.3s ease;
 }
 
-/* Creating a card that complements your .gradient-hero colors */
-.research-card {
-  background: #1a252f; /* Matching your heading color */
+/* The Dark 3D Bento Card */
+.research-card-3d {
+  background: #0f2027;
   color: white;
-  border-left: 4px solid #e67e22; /* The accent color as a highlight */
+  border-radius: 28px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
-.research-card strong {
-  color: #e67e22; /* The accent color */
+.research-card-3d:hover {
+  transform: translateY(-10px) rotateX(4deg) rotateY(-4deg);
+  box-shadow: 15px 25px 50px rgba(0,0,0,0.3);
+  border-color: rgba(230, 126, 34, 0.3);
 }
 
-.rounded-4 {
-  border-radius: 1rem !important;
-}
-/* The starting state: invisible and shifted down 20px */
-.motion-card {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-} 
-/* Delay the Research Card (the col-lg-4) so it pops up after the text */
-.col-lg-4.motion-card {
-  transition-delay: 0.3s;
+.icon-circle {
+  background: rgba(230, 126, 34, 0.15);
+  min-width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px; /* More of a "squircle" for 2026 */
+  margin-right: 18px;
+  font-size: 1.3rem;
+  border: 1px solid rgba(230, 126, 34, 0.2);
 }
 
-/* The "visible" state: triggered by JavaScript */
-.motion-card.appear {
-  opacity: 1;
-  transform: translateY(0);
+.badge-modern {
+  background: white;
+  color: #0f2027;
+  border: 1px solid rgba(15, 32, 39, 0.08);
+  padding: 0.6rem 1.2rem;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.badge-modern:hover {
+  border-color: #e67e22;
+  color: #e67e22;
+  transform: translateY(-2px);
+}
+
+.card-glow {
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(230, 126, 34, 0.05) 0%, transparent 70%);
+  pointer-events: none;
 }
 </style>

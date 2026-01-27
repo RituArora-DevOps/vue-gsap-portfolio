@@ -1,18 +1,16 @@
 <template>
-  <section id="projects" class="py-5 bg-section-alt">
+  <section id="projects" class="py-5 bg-section-alt" style="background: #f8f9fa;">
     <div class="container">
-      <h2 class="text-center text-heading display-5 mb-2" v-scroll>Featured Projects</h2>
-      <p class="text-center text-muted mb-5 motion-card" v-scroll>
+      <h2 class="text-center text-heading display-5 mb-2 project-header">Featured Projects</h2>
+      <p class="text-center text-muted mb-5 project-subtitle">
         Showcasing expertise in Agentic RAG, Cloud-Native DevOps, and Full-Stack Engineering.
       </p>
 
       <div class="row gy-4">
         <div 
-          v-for="(project, key, index) in projects" 
-          :key="key" 
-          class="col-md-6 col-lg-4 motion-card"
-          v-scroll
-          :style="{ transitionDelay: (index * 0.1) + 's' }"
+          v-for="project in projects" 
+          :key="project.title" 
+          class="col-md-6 col-lg-4 project-anim-wrapper"
         >
           <ProjectCard :project="project" />
         </div>
@@ -22,7 +20,12 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ProjectCard from './ProjectCard.vue';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const projects = {
   ai_subscription: {
@@ -93,23 +96,62 @@ const projects = {
     live: 'https://laravel-resume.onrender.com/en'
   },
 };
+onMounted(() => {
+  gsap.from(".project-header, .project-subtitle", {
+    scrollTrigger: { trigger: "#projects", start: "top 85%" },
+    y: 30,
+    opacity: 0,
+    stagger: 0.2,
+    duration: 1
+  });
+
+  gsap.from(".project-anim-wrapper", {
+    scrollTrigger: {
+      trigger: ".row.gy-4",
+      start: "top 80%",
+    },
+    y: 50,
+    opacity: 0,
+    stagger: 0.1,
+    duration: 0.8,
+    ease: "power3.out",
+    clearProps: "all"
+  });
+});
 </script>
 
 <style scoped>
+/* 1. Typography Refinement */
 .text-heading {
-  color: #1a252f;
-  font-weight: 700;
+  color: #0f2027; /* Updated to your modern dark-navy */
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
-/* Sync with your scroll directive */
-.motion-card {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease-out;
+.project-subtitle {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  color: rgba(15, 32, 39, 0.7) !important;
 }
 
-.motion-card.appear {
-  opacity: 1;
-  transform: translateY(0);
+/* 2. Layout Spacing */
+#projects {
+  /* Ensuring enough space for the floating nav and footer transitions */
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* 3. Animation Note: 
+   We removed .motion-card and .appear because GSAP is handling 
+   the entrance. This prevents "double-firing" animations.
+*/
+
+/* 4. Responsive Adjustments */
+@media (max-width: 768px) {
+  .display-5 {
+    font-size: 2rem;
+  }
 }
 </style>

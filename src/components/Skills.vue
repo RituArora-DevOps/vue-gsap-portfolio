@@ -1,36 +1,34 @@
 <template>
-  <section id="skills" class="py-5 bg-section-alt">
+  <section id="skills" class="py-5 bg-section-alt" style="perspective: 1200px; background: #fbfbfb;">
     <div class="container">
-      <h2 class="text-center text-heading mb-5">Technical Arsenal</h2>
+      <h2 class="text-center text-heading mb-5 skills-title">Technical Arsenal</h2>
 
       <div class="row g-4 justify-content-center">
         <div
-          v-for="(group, index) in skillGroups"
+          v-for="group in skillGroups"
           :key="group.title"
-          class="col-lg-4 col-md-6 col-12 d-flex motion-card"
-          v-scroll
-          :style="{ transitionDelay: (index * 0.1) + 's' }"
+          class="col-lg-4 col-md-6 col-12 d-flex skill-card-wrapper"
         >
-          <div class="card shadow-sm flex-fill border-0 skill-hover-card">
-            <div class="card-body text-center p-4">
-              <div class="skill-icon-wrapper mb-3">
-                <i :class="group.icon" class="fs-1 text-accent"></i>
+          <div class="glass-bento-card flex-fill">
+            <div class="card-content p-4">
+              <div class="d-flex align-items-center mb-4">
+                <div class="skill-icon-box me-3">
+                  <i :class="group.icon"></i>
+                </div>
+                <h5 class="m-0 text-heading fw-bold">{{ group.title }}</h5>
               </div>
               
-              <h5 class="card-title text-heading fw-bold mb-3">
-                {{ group.title }}
-              </h5>
-              
-              <div class="d-flex flex-wrap justify-content-center gap-2">
+              <div class="d-flex flex-wrap gap-2">
                 <span
                   v-for="(skill, i) in group.skills"
                   :key="i"
-                  class="badge-skill"
+                  class="badge-modern-skill"
                 >
                   {{ skill }}
                 </span>
               </div>
             </div>
+            <div class="glass-shimmer"></div>
           </div>
         </div>
       </div>
@@ -39,82 +37,134 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger);
+
 const skillGroups = [
   {
     title: "AI & Intelligence",
-    icon: "bi bi-cpu", // Using Bootstrap Icons or DevIcons
+    icon: "bi bi-cpu",
     skills: ["Agentic RAG", "Generative AI", "Computer Vision", "LangChain", "LLMs"]
   },
   {
-    title: "Backend",
-    icon: "devicon-spring-plain",
-    skills: ["Spring Boot", "Java", "Node.js", "PHP", "Python", "Express.js"]
-  },
-  {
-    title: "Frontend",
-    icon: "devicon-vuejs-plain",
-    skills: ["Vue.js", "React", "JavaScript", "TypeScript", "Tailwind CSS", "Bootstrap"]
-  },
-  {
     title: "DevSecOps",
-    icon: "devicon-docker-plain",
-    skills: ["Docker", "Kubernetes", "Helm", "Jenkins", "Terraform", "SonarQube", "Trivy"]
+    icon: "bi bi-shield-check",
+    skills: ["Docker", "Kubernetes", "Helm", "Terraform", "SonarQube", "Trivy"]
   },
   {
-    title: "Cloud Engineering",
-    icon: "devicon-amazonwebservices-original",
-    skills: ["AWS", "Azure", "GCP", "Cloud-Native Architecture"]
+    title: "Full Stack",
+    icon: "bi bi-layers",
+    skills: ["Spring Boot", "Java", "Vue.js", "React", "TypeScript", "Node.js"]
   },
   {
-    title: "Database",
-    icon: "devicon-mysql-plain",
-    skills: ["PostgreSQL", "MongoDB", "SQL Server", "JPA", "Entity Framework"]
+    title: "Cloud & Data",
+    icon: "bi bi-cloud-arrow-up",
+    skills: ["AWS", "Azure", "PostgreSQL", "MongoDB", "Data Pipelines"]
   },
   {
     title: "Core & Research",
     icon: "bi bi-journal-code",
-    skills: ["C#", "Shell", "Agile/Scrum", "Linux", "Data Pipelines", "JUnit", "Pytest"]
+    skills: ["C#", "Python", "Linux HPC", "Agile", "Unit Testing"]
   }
 ];
+
+onMounted(() => {
+  gsap.from(".skill-card-wrapper", {
+    scrollTrigger: {
+      trigger: "#skills",
+      start: "top 80%",
+    },
+    y: 50,
+    opacity: 0,
+    stagger: 0.1,
+    duration: 0.8,
+    ease: "power3.out",
+    clearProps: "all"
+  });
+});
 </script>
 
 <style scoped>
-.badge-skill {
-  background-color: #f1f3f5;
-  color: #1a252f; /* Your dark blue */
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  font-size: 0.85rem;
+/* Bento Glass Card Base */
+.glass-bento-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+.glass-bento-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  border-color: #e67e2244;
+}
+
+/* Icon Box Styling */
+.skill-icon-box {
+  width: 48px;
+  height: 48px;
+  background: #0f2027;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 12px rgba(15, 32, 39, 0.15);
+}
+
+.glass-bento-card:hover .skill-icon-box {
+  background: #e67e22;
+  transform: rotate(-5deg);
+  transition: all 0.3s ease;
+}
+
+/* 2026 Pill Badges */
+.badge-modern-skill {
+  background: rgba(15, 32, 39, 0.04);
+  color: #1a252f;
+  padding: 0.5rem 0.9rem;
+  border-radius: 100px;
+  font-size: 0.8rem;
   font-weight: 500;
-  transition: all 0.2s;
-  border: 1px solid transparent;
+  border: 1px solid rgba(15, 32, 39, 0.05);
+  transition: all 0.2s ease;
 }
 
-.badge-skill:hover {
-  border-color: #e67e22; /* Your orange accent */
+.badge-modern-skill:hover {
+  background: white;
+  border-color: #e67e22;
   color: #e67e22;
-  background-color: white;
+  transform: scale(1.05);
 }
 
-.skill-hover-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-bottom: 3px solid transparent !important;
+/* Light Sweep Shimmer Effect */
+.glass-shimmer {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: skewX(-25deg);
+  transition: 0.7s;
 }
 
-.skill-hover-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
-  border-bottom: 3px solid #e67e22 !important;
-}
-
-/* Stagger animation setup */
-.motion-card {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease-out;
-}
-.motion-card.appear {
-  opacity: 1;
-  transform: translateY(0);
+.glass-bento-card:hover .glass-shimmer {
+  left: 150%;
 }
 </style>

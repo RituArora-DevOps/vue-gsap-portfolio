@@ -1,77 +1,53 @@
+/* 2026 Modernized Global Styles */
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --accent-orange: #e67e22;
+  --dark-navy: #0f2027;
+}
+
+/* 1. Dynamic Mesh Gradient Background */
 .gradient-hero {
-  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  /* Using a 2026-style mesh gradient for more organic depth */
+  background-color: var(--dark-navy);
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(197, 35%, 20%, 1) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(186, 33%, 25%, 1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(197, 35%, 15%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(28, 77%, 40%, 0.15) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* 2. Upgraded "Liquid Glass" Material */
+.translucent-dark {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid var(--glass-border);
+  /* Adding a subtle inner glow (specular highlight) */
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05);
 }
 
 body {
-  font-family: "Inter", sans-serif;
-}
-
-.translucent-dark {
-  background-color: rgba(15, 32, 39, 0.8); /* dark from your gradient */
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-#skills i {
-  font-size: 1.5rem;
-  margin-right: 0.5rem;
-  vertical-align: middle;
-}
-
-#skills ul li {
-  font-size: 0.9rem;
-  padding: 0.4rem 0.75rem;
-}
-
-.card-title {
-  color: inherit;
-}
-
-.card-text,
-.card-footer a {
-  color: inherit;
-}
-
-.card-footer a.btn-outline-dark {
-  border-color: #1a252f; /* your preferred dark blue */
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background-color: #fbfbfb; /* Slightly warmer white for 2026 aesthetics */
   color: #1a252f;
 }
 
-.card-footer a.btn-outline-dark:hover {
-  background-color: #1a252f;
-  border-color: #1a252f;
-  color: #fff;
-}
-
+/* 3. Refined Section Headers */
 .text-heading {
-  color: #1a252f; /* Your dark blue */
-  font-weight: 600;
+  color: var(--dark-navy);
+  font-weight: 700;
+  letter-spacing: -0.02em; /* Tighter tracking for a high-end look */
 }
 
+/* 4. Smooth Scrolling + Selection Color */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
-.bg-section {
-  background-color: #f8f9fa; /* Light grey */
-}
-
-.bg-section-alt {
-  background-color: #f8f9fa; /* Softer light tone */
-}
-
-.text-accent {
-  color: #e67e22;
-}
-
-#experience ul li {
-  margin-bottom: 0.3rem;
-}
-
-.project-card {
-  transition: transform 0.3s ease;
-}
-
-.motion-card {
-  will-change: transform, opacity;
+::selection {
+  background: var(--accent-orange);
+  color: white;
 }
