@@ -20,7 +20,7 @@
               <p class="text-secondary-glass small">Building intelligent enterprise solutions, GenAI integrations, and robust full-stack architectures.</p>
             </div>
 
-            <div class="timeline-item mb-5">
+            <!-- <div class="timeline-item mb-5">
               <div class="timeline-dot-wrap">
                 <div class="timeline-dot"></div>
               </div>
@@ -36,7 +36,7 @@
               <h5 class="mb-1 fw-bold text-white text-wrap">Technical Content & Systems Coordinator</h5>
               <p class="text-accent small mb-1 fw-medium text-uppercase tracking-wider">University of Delhi, India · Jan 2016 – Dec 2018</p>
               <p class="text-secondary-glass small">Led digital transformation for national e-learning platforms and coordinated technical content architecture.</p>
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -51,7 +51,7 @@
               <div class="year-badge">2025</div>
             </div>
             
-            <div class="edu-card mb-4 fainted">
+            <!-- <div class="edu-card mb-4 fainted">
               <strong class="text-white d-block">PhD in Computational Chemistry</strong>
               <span class="small text-secondary-glass">University of Delhi, India</span>
             </div>
@@ -59,7 +59,7 @@
             <div class="edu-card fainted">
               <strong class="text-white d-block">BSc & MSc in Chemistry</strong>
               <span class="small text-secondary-glass">University of Delhi, India</span>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
