@@ -8,25 +8,45 @@
           <h4 class="text-accent mb-5 d-flex align-items-center">
             <span class="header-line"></span> Professional Experience
           </h4>
-          
+
           <div class="ps-4 timeline-container">
             <div class="timeline-item mb-5">
               <div class="timeline-dot-wrap">
                 <div class="timeline-dot-pulse"></div>
                 <div class="timeline-dot active"></div>
               </div>
+              <h5 class="mb-1 fw-bold text-white">AI Full Stack Developer Consultant</h5>
+              <p class="text-accent small mb-1 fw-medium text-uppercase tracking-wider"> Sankof Technologies Inc., QC · Jan 2026 - Present</p>
+              <!-- <p class="text-secondary-glass small">Building intelligent enterprise solutions, GenAI integrations, and robust full-stack architectures.</p> -->
+            </div>
+          
+            <div class="timeline-item mb-5">
+              <div class="timeline-dot-wrap">
+                <div class="timeline-dot-pulse"></div>
+                <div class="timeline-dot"></div>
+              </div>
               <h5 class="mb-1 fw-bold text-white">AI Full Stack Developer</h5>
               <p class="text-accent small mb-1 fw-medium text-uppercase tracking-wider">Yulcom Technologies, QC · Oct 2025 – Present</p>
-              <p class="text-secondary-glass small">Building intelligent enterprise solutions, GenAI integrations, and robust full-stack architectures.</p>
+              <!-- <p class="text-secondary-glass small">Building intelligent enterprise solutions, GenAI integrations, and robust full-stack architectures.</p> -->
             </div>
 
-            <!-- <div class="timeline-item mb-5">
+            <div class="timeline-item mb-5">
+              <div class="timeline-dot-wrap">
+                <div class="timeline-dot-pulse"></div>
+                <div class="timeline-dot"></div>
+              </div>
+              <h5 class="mb-1 fw-bold text-white">Web Developer</h5>
+              <p class="text-accent small mb-1 fw-medium text-uppercase tracking-wider">SoftLoopers Software Solutions · Jul 2022 - Jan 2024</p>
+              <!-- <p class="text-secondary-glass small">Building intelligent enterprise solutions, GenAI integrations, and robust full-stack architectures.</p> -->
+            </div>
+
+            <div class="timeline-item mb-5">
               <div class="timeline-dot-wrap">
                 <div class="timeline-dot"></div>
               </div>
-              <h5 class="mb-1 fw-bold text-white">Computational Developer (R&D)</h5>
+              <h5 class="mb-1 fw-bold text-white">Computational Researcher/Developer - Postdoc</h5>
               <p class="text-accent small mb-1 fw-medium text-uppercase tracking-wider">Concordia University, QC · Mar 2019 – Feb 2022</p>
-              <p class="text-secondary-glass small">Architected high-performance data pipelines and automated simulation workflows on Linux HPC clusters.</p>
+              <!-- <p class="text-secondary-glass small">Architected high-performance data pipelines and automated simulation workflows on Linux HPC clusters.</p> -->
             </div>
 
             <div class="timeline-item mb-4">
@@ -35,8 +55,8 @@
               </div>
               <h5 class="mb-1 fw-bold text-white text-wrap">Technical Content & Systems Coordinator</h5>
               <p class="text-accent small mb-1 fw-medium text-uppercase tracking-wider">University of Delhi, India · Jan 2016 – Dec 2018</p>
-              <p class="text-secondary-glass small">Led digital transformation for national e-learning platforms and coordinated technical content architecture.</p>
-            </div> -->
+              <!-- <p class="text-secondary-glass small">Led digital transformation for national e-learning platforms and coordinated technical content architecture.</p> -->
+            </div>
           </div>
         </div>
 
@@ -47,19 +67,22 @@
           <div class="edu-list">
             <div class="edu-card mb-4">
               <strong class="text-white d-block">AEC Full Stack Developer</strong>
-              <span class="small text-secondary-glass">John Abbott College, Montréal</span>
-              <div class="year-badge">2025</div>
+              <span class="text-accent small mb-1 fw-medium text-uppercase tracking-wider">John Abbott College, Montréal</span>
+              <!-- <div class="year-badge">2025</div> -->
             </div>
             
-            <!-- <div class="edu-card mb-4 fainted">
-              <strong class="text-white d-block">PhD in Computational Chemistry</strong>
-              <span class="small text-secondary-glass">University of Delhi, India</span>
+            <div class="edu-card mb-4 fainted">
+              <strong class="text-white d-block">PhD in Computational Science</strong>
+              <span class="text-accent small mb-1 fw-medium text-uppercase tracking-wider">University of Delhi, India</span>
+              <p class="text-secondary-glass small">
+                Deep foundations in applied mathematics, statistical mechanics, optimization algorithms, and high-dimensional data analysis, core underpinnings of modern ML.
+              </p>
             </div>
 
             <div class="edu-card fainted">
-              <strong class="text-white d-block">BSc & MSc in Chemistry</strong>
-              <span class="small text-secondary-glass">University of Delhi, India</span>
-            </div> -->
+              <strong class="text-white d-block">MSc & BSc</strong>
+              <span class="text-accent small mb-1 fw-medium text-uppercase tracking-wider">University of Delhi, India</span>
+            </div>
           </div>
         </div>
       </div>

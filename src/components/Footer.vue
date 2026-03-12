@@ -24,7 +24,7 @@
           <div class="tech-icons">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue 3" class="tech-icon-img" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap 5" class="tech-icon-img" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gsap/gsap-original.svg" alt="GSAP" class="tech-icon-img dark-brand-icon" />
+            <!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gsap/gsap-original.svg" alt="GSAP" class="tech-icon-img dark-brand-icon" /> -->
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" alt="Vite" class="tech-icon-img" />
           </div>
         </div>
@@ -128,3 +128,10 @@
   background: linear-gradient(to right, transparent, rgba(230, 126, 34, 0.4), transparent);
 }
 </style>
+
+<script setup>
+import { computed } from 'vue';
+
+// This automatically stays up to date based on the system clock
+const currentYear = computed(() => new Date().getFullYear());
+</script>

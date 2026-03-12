@@ -45,7 +45,7 @@
 
           <div class="mt-5 pt-4 border-top footer-note">
             <p class="small text-muted mb-0 d-flex align-items-center justify-content-center">
-              <i class="bi bi-geo-alt-fill me-2 text-accent"></i> Based in Greater Montréal, QC
+              <i class="bi bi-geo-alt-fill me-2 text-accent"></i> Based in Montréal, QC
             </p>
           </div>
         </div>

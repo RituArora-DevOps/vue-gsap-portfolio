@@ -8,11 +8,11 @@
       </h1>
       
       <p class="lead tracking-wider text-uppercase opacity-90" style="letter-spacing: 3px; font-size: 1.1rem;">
-        Full Stack Developer | DevOps & AI Enthusiast
+        AI Full Stack Developer 
       </p>
       
       <p class="mt-2 location-tag">
-        <i class="bi bi-geo-alt"></i> Greater Montréal, QC | jsr.ritu.jsr@gmail.com
+        <i class="bi bi-geo-alt"></i> Montréal, QC | jsr.ritu.jsr@gmail.com
       </p>
       
       <div class="hero-actions d-flex justify-content-center gap-3 flex-wrap mt-5">
